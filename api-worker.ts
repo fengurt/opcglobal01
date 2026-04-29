@@ -60,6 +60,6 @@ async function requestToNodeRequest(request: Request): Promise<any> {
 interface Env {
   DB: D1Database;
   HYPERDRIVE: Hyperdrive;
-  ASSETS: R2Bucket;
+  ASSETS_BUCKET: R2Bucket;
   NODE_ENV: string;
 }

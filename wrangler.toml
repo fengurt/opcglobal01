@@ -5,20 +5,11 @@ compatibility_flags = ["nodejs_compat"]
 # Pages configuration
 pages_build_output_dir = "dist/public"
 
-# Dev settings
-[dev]
-port = 5173
-local_protocol = "http"
-
-# Build configuration
-build.command = "pnpm run build"
-build.watch_dir = "src"
-
 # Environment variables (set in Cloudflare dashboard)
 [vars]
 NODE_ENV = "production"
 
-# Bindings
+# Bindings - NOTE: ASSETS is reserved in Pages projects
 [[d1_databases]]
 binding = "DB"
 database_name = "opcglobal"
@@ -29,5 +20,5 @@ binding = "HYPERDRIVE"
 id = "YOUR_HYPERDRIVE_ID"
 
 [[r2_buckets]]
-binding = "ASSETS"
+binding = "ASSETS_BUCKET"
 bucket_name = "opcglobal-assets"

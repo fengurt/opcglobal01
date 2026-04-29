@@ -8,8 +8,8 @@ import { dataRoutes } from "./api/data";
 type Env = {
   DB: D1Database;
   HYPERDRIVE: Hyperdrive;
-  ASSETS: R2Bucket;
- Bindings: {
+  ASSETS_BUCKET_BUCKET: R2Bucket;
+  Bindings: {
     NODE_ENV: string;
   };
 };
@@ -39,7 +39,7 @@ app.get("*", async (c) => {
   const cacheKey = `static:${pathname}`;
 
   try {
-    const object = await c.env.ASSETS.get(pathname);
+    const object = await c.env.ASSETS_BUCKET.get(pathname);
     if (object) {
       return c.body(object.body, {
         headers: {
