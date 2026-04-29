@@ -1,0 +1,33 @@
+name = "opcglobal01"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Pages configuration
+pages_build_output_dir = "dist/public"
+
+# Dev settings
+[dev]
+port = 5173
+local_protocol = "http"
+
+# Build configuration
+build.command = "pnpm run build"
+build.watch_dir = "src"
+
+# Environment variables (set in Cloudflare dashboard)
+[vars]
+NODE_ENV = "production"
+
+# Bindings
+[[d1_databases]]
+binding = "DB"
+database_name = "opcglobal"
+database_id = "YOUR_D1_DATABASE_ID"
+
+[[hyperdrive]]
+binding = "HYPERDRIVE"
+id = "YOUR_HYPERDRIVE_ID"
+
+[[r2_buckets]]
+binding = "ASSETS"
+bucket_name = "opcglobal-assets"
