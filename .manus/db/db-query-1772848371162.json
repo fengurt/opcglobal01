@@ -1,0 +1,21 @@
+{
+  "query": "SELECT * FROM translations WHERE `key` = 'cert.l1.name' LIMIT 1;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute SELECT * FROM translations WHERE `key` = 'cert.l1.name' LIMIT 1;",
+  "rows": [
+    {
+      "id": "25",
+      "key": "cert.l1.name",
+      "category": "certification",
+      "en": "The Operator",
+      "zh": "操作员",
+      "fr": "L'Opérateur",
+      "ja": "オペレーター",
+      "createdAt": "2026-01-15 00:28:35",
+      "updatedAt": "2026-01-15 00:28:35"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tkey\tcategory\ten\tzh\tfr\tja\tcreatedAt\tupdatedAt\n25\tcert.l1.name\tcertification\tThe Operator\t操作员\tL'Opérateur\tオペレーター\t2026-01-15 00:28:35\t2026-01-15 00:28:35\n",
+  "stderr": "",
+  "execution_time_ms": 59
+}

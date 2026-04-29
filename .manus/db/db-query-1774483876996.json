@@ -1,0 +1,26 @@
+{
+  "query": "SELECT id, nameZh, nameEn, type, websiteUrl, displayOrder FROM partners WHERE nameZh LIKE '%艺术疗愈%' OR nameZh LIKE '%无魔%' ORDER BY displayOrder;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute SELECT id, nameZh, nameEn, type, websiteUrl, displayOrder FROM partners WHERE nameZh LIKE '%艺术疗愈%' OR nameZh LIKE '%无魔%' ORDER BY displayOrder;",
+  "rows": [
+    {
+      "id": "30010",
+      "nameZh": "亚洲艺术疗愈研究院（APHA）",
+      "nameEn": "Asia Art Healing Research Institute (APHA)",
+      "type": "organization",
+      "websiteUrl": "/apha",
+      "displayOrder": "1"
+    },
+    {
+      "id": "90002",
+      "nameZh": "瑞士无魔协会",
+      "nameEn": "Swiss ManaEndless Association",
+      "type": "organization",
+      "websiteUrl": "/manaendless",
+      "displayOrder": "2"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tnameZh\tnameEn\ttype\twebsiteUrl\tdisplayOrder\n30010\t亚洲艺术疗愈研究院（APHA）\tAsia Art Healing Research Institute (APHA)\torganization\t/apha\t1\n90002\t瑞士无魔协会\tSwiss ManaEndless Association\torganization\t/manaendless\t2\n",
+  "stderr": "",
+  "execution_time_ms": 52
+}

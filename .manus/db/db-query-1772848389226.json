@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE translations SET en = 'AI Coach', zh = '智能教练', fr = 'Coach IA', ja = 'AIコーチ' WHERE `key` = 'cert.l1.name';\nUPDATE translations SET en = 'Master AI tools and coach others to unlock independent productivity.', zh = '掌握AI工具，教练他人解锁独立产能。', fr = 'Maîtriser les outils IA et coacher les autres pour une productivité indépendante.', ja = 'AIツールをマスターし、他者の独立生産性をコーチング。' WHERE `key` = 'cert.l1.desc';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute UPDATE translations SET en = 'AI Coach', zh = '智能教练', fr = 'Coach IA', ja = 'AIコーチ' WHERE `key` = 'cert.l1.name';\nUPDATE translations SET en = 'Master AI tools and coach others to unlock independent productivity.', zh = '掌握AI工具，教练他人解锁独立产能。', fr = 'Maîtriser les outils IA et coacher les autres pour une productivité indépendante.', ja = 'AIツールをマスターし、他者の独立生産性をコーチング。' WHERE `key` = 'cert.l1.desc';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 69
+}

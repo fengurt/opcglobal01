@@ -1,0 +1,8 @@
+{
+  "query": "UPDATE translations SET value_en = 'AI Coach', value_zh = '智能教练', value_fr = 'Coach IA', value_ja = 'AIコーチ' WHERE `key` = 'cert.l1.name';\nUPDATE translations SET value_en = 'Master AI tools and coach others to unlock independent productivity.', value_zh = '掌握AI工具，教练他人解锁独立产能。', value_fr = 'Maîtriser les outils IA et coacher les autres pour une productivité indépendante.', value_ja = 'AIツールをマスターし、他者の独立生産性をコーチング。' WHERE `key` = 'cert.l1.desc';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute UPDATE translations SET value_en = 'AI Coach', value_zh = '智能教练', value_fr = 'Coach IA', value_ja = 'AIコーチ' WHERE `key` = 'cert.l1.name';\nUPDATE translations SET value_en = 'Master AI tools and coach others to unlock independent productivity.', value_zh = '掌握AI工具，教练他人解锁独立产能。', value_fr = 'Maîtriser les outils IA et coacher les autres pour une productivité indépendante.', value_ja = 'AIツールをマスターし、他者の独立生産性をコーチング。' WHERE `key` = 'cert.l1.desc';",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1054 (42S22) at line 1: Unknown column 'value_en' in 'field list'"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE translations SET en = 'Master AI, Achieve Freedom', zh = '善用AI，终获自由', fr = 'Maîtriser l''IA, Atteindre la Liberté', ja = 'AIを活用し、自由を手に入れる' WHERE `key` = 'hero.badge';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute UPDATE translations SET en = 'Master AI, Achieve Freedom', zh = '善用AI，终获自由', fr = 'Maîtriser l''IA, Atteindre la Liberté', ja = 'AIを活用し、自由を手に入れる' WHERE `key` = 'hero.badge';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 206
+}

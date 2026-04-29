@@ -1,0 +1,24 @@
+{
+  "query": "SELECT `key`, en, zh, fr, ja FROM translations WHERE `key` LIKE 'cert.l1%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute SELECT `key`, en, zh, fr, ja FROM translations WHERE `key` LIKE 'cert.l1%';",
+  "rows": [
+    {
+      "key": "cert.l1.name",
+      "en": "AI Coach",
+      "zh": "智能教练",
+      "fr": "Coach IA",
+      "ja": "AIコーチ"
+    },
+    {
+      "key": "cert.l1.desc",
+      "en": "Master AI tools and coach others to unlock independent productivity.",
+      "zh": "掌握AI工具，教练他人解锁独立产能。",
+      "fr": "Maîtriser les outils IA et coacher les autres pour une productivité indépendante.",
+      "ja": "AIツールをマスターし、他者の独立生産性をコーチング。"
+    }
+  ],
+  "messages": [],
+  "stdout": "key\ten\tzh\tfr\tja\ncert.l1.name\tAI Coach\t智能教练\tCoach IA\tAIコーチ\ncert.l1.desc\tMaster AI tools and coach others to unlock independent productivity.\t掌握AI工具，教练他人解锁独立产能。\tMaîtriser les outils IA et coacher les autres pour une productivité indépendante.\tAIツールをマスターし、他者の独立生産性をコーチング。\n",
+  "stderr": "",
+  "execution_time_ms": 58
+}

@@ -1,0 +1,45 @@
+{
+  "query": "SELECT id, nameEn, nameZh, titleEn, isVisible FROM experts ORDER BY displayOrder;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute SELECT id, nameEn, nameZh, titleEn, isVisible FROM experts ORDER BY displayOrder;",
+  "rows": [
+    {
+      "id": "30011",
+      "nameEn": "Yu Nan",
+      "nameZh": "俞楠",
+      "titleEn": "Founder of OPC Global",
+      "isVisible": "visible"
+    },
+    {
+      "id": "30012",
+      "nameEn": "Zhang Qingzhi",
+      "nameZh": "张青之",
+      "titleEn": "ICF Master Certified Coach",
+      "isVisible": "visible"
+    },
+    {
+      "id": "30013",
+      "nameEn": "Li Xin",
+      "nameZh": "李新",
+      "titleEn": "Former CTO, Fortune 500",
+      "isVisible": "visible"
+    },
+    {
+      "id": "30014",
+      "nameEn": "Zhou Huilin",
+      "nameZh": "周惠林",
+      "titleEn": "Founder, Creative Ventures",
+      "isVisible": "visible"
+    },
+    {
+      "id": "30015",
+      "nameEn": "Wang Yayun",
+      "nameZh": "王雅赟",
+      "titleEn": "PhD, Organizational Psychology",
+      "isVisible": "visible"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tnameEn\tnameZh\ttitleEn\tisVisible\n30011\tYu Nan\t俞楠\tFounder of OPC Global\tvisible\n30012\tZhang Qingzhi\t张青之\tICF Master Certified Coach\tvisible\n30013\tLi Xin\t李新\tFormer CTO, Fortune 500\tvisible\n30014\tZhou Huilin\t周惠林\tFounder, Creative Ventures\tvisible\n30015\tWang Yayun\t王雅赟\tPhD, Organizational Psychology\tvisible\n",
+  "stderr": "",
+  "execution_time_ms": 51
+}

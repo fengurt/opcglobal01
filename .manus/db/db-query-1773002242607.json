@@ -1,0 +1,98 @@
+{
+  "query": "SELECT id, nameEn, nameZh, type, isVisible, displayOrder FROM partners ORDER BY displayOrder;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute SELECT id, nameEn, nameZh, type, isVisible, displayOrder FROM partners ORDER BY displayOrder;",
+  "rows": [
+    {
+      "id": "30001",
+      "nameEn": "World Canal Cities Canal Walk Action",
+      "nameZh": "世界运河城市Canal Walk行动",
+      "type": "organization",
+      "isVisible": "visible",
+      "displayOrder": "0"
+    },
+    {
+      "id": "30002",
+      "nameEn": "Boyu Education",
+      "nameZh": "伯禹教育",
+      "type": "organization",
+      "isVisible": "visible",
+      "displayOrder": "1"
+    },
+    {
+      "id": "30003",
+      "nameEn": "LanMa Tech",
+      "nameZh": "澜码科技",
+      "type": "organization",
+      "isVisible": "visible",
+      "displayOrder": "2"
+    },
+    {
+      "id": "30004",
+      "nameEn": "Beijing Chaoyang Hospital, Capital Medical University",
+      "nameZh": "首都医科大学附属北京朝阳医院",
+      "type": "organization",
+      "isVisible": "visible",
+      "displayOrder": "3"
+    },
+    {
+      "id": "30005",
+      "nameEn": "SouSou Offer",
+      "nameZh": "SouSou Offer",
+      "type": "organization",
+      "isVisible": "visible",
+      "displayOrder": "4"
+    },
+    {
+      "id": "30006",
+      "nameEn": "Shendian Consulting",
+      "nameZh": "神店咨询",
+      "type": "organization",
+      "isVisible": "visible",
+      "displayOrder": "5"
+    },
+    {
+      "id": "30007",
+      "nameEn": "OPC Global",
+      "nameZh": "OPC Global (OPC之家)",
+      "type": "organization",
+      "isVisible": "visible",
+      "displayOrder": "6"
+    },
+    {
+      "id": "30008",
+      "nameEn": "Nibiru (Ruiyue Information)",
+      "nameZh": "睿悦信息（Nibiru）",
+      "type": "organization",
+      "isVisible": "visible",
+      "displayOrder": "7"
+    },
+    {
+      "id": "30009",
+      "nameEn": "China Zhiyou Group",
+      "nameZh": "中智游集团",
+      "type": "organization",
+      "isVisible": "visible",
+      "displayOrder": "8"
+    },
+    {
+      "id": "30010",
+      "nameEn": "Asian Art Therapy Research Institute",
+      "nameZh": "亚洲艺术疗愈研究院",
+      "type": "organization",
+      "isVisible": "visible",
+      "displayOrder": "9"
+    },
+    {
+      "id": "30011",
+      "nameEn": "Boya Wenqu Academy",
+      "nameZh": "博雅问渠书院",
+      "type": "organization",
+      "isVisible": "visible",
+      "displayOrder": "10"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tnameEn\tnameZh\ttype\tisVisible\tdisplayOrder\n30001\tWorld Canal Cities Canal Walk Action\t世界运河城市Canal Walk行动\torganization\tvisible\t0\n30002\tBoyu Education\t伯禹教育\torganization\tvisible\t1\n30003\tLanMa Tech\t澜码科技\torganization\tvisible\t2\n30004\tBeijing Chaoyang Hospital, Capital Medical University\t首都医科大学附属北京朝阳医院\torganization\tvisible\t3\n30005\tSouSou Offer\tSouSou Offer\torganization\tvisible\t4\n30006\tShendian Consulting\t神店咨询\torganization\tvisible\t5\n30007\tOPC Global\tOPC Global (OPC之家)\torganization\tvisible\t6\n30008\tNibiru (Ruiyue Information)\t睿悦信息（Nibiru）\torganization\tvisible\t7\n30009\tChina Zhiyou Group\t中智游集团\torganization\tvisible\t8\n30010\tAsian Art Therapy Research Institute\t亚洲艺术疗愈研究院\torganization\tvisible\t9\n30011\tBoya Wenqu Academy\t博雅问渠书院\torganization\tvisible\t10\n",
+  "stderr": "",
+  "execution_time_ms": 197
+}

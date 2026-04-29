@@ -1,0 +1,37 @@
+{
+  "query": "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'translations' ORDER BY ORDINAL_POSITION;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'translations' ORDER BY ORDINAL_POSITION;",
+  "rows": [
+    {
+      "COLUMN_NAME": "id"
+    },
+    {
+      "COLUMN_NAME": "key"
+    },
+    {
+      "COLUMN_NAME": "category"
+    },
+    {
+      "COLUMN_NAME": "en"
+    },
+    {
+      "COLUMN_NAME": "zh"
+    },
+    {
+      "COLUMN_NAME": "fr"
+    },
+    {
+      "COLUMN_NAME": "ja"
+    },
+    {
+      "COLUMN_NAME": "createdAt"
+    },
+    {
+      "COLUMN_NAME": "updatedAt"
+    }
+  ],
+  "messages": [],
+  "stdout": "COLUMN_NAME\nid\nkey\ncategory\nen\nzh\nfr\nja\ncreatedAt\nupdatedAt\n",
+  "stderr": "",
+  "execution_time_ms": 54
+}

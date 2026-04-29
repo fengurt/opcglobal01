@@ -1,0 +1,43 @@
+{
+  "query": "SELECT * FROM translations WHERE `key` LIKE 'experts%' ORDER BY `key`;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute SELECT * FROM translations WHERE `key` LIKE 'experts%' ORDER BY `key`;",
+  "rows": [
+    {
+      "id": "34",
+      "key": "experts.subtitle",
+      "category": "experts",
+      "en": "Real humans, real reputation. In an age of AI anonymity, we stand on the shoulders of industry giants to build a trusted E-E-A-T ecosystem.",
+      "zh": "真人实名，真实声誉。在AI匿名时代，我们站在行业巨人的肩膀上，构建可信赖的E-E-A-T生态系统。",
+      "fr": "De vraies personnes, une vraie réputation. À l'ère de l'anonymat de l'IA, nous nous appuyons sur les épaules des géants de l'industrie pour construire un écosystème E-E-A-T de confiance.",
+      "ja": "本物の人間、本物の評判。AI匿名時代において、私たちは業界の巨人の肩に立ち、信頼できるE-E-A-Tエコシステムを構築します。",
+      "createdAt": "2026-01-15 00:28:35",
+      "updatedAt": "2026-01-15 00:28:35"
+    },
+    {
+      "id": "33",
+      "key": "experts.title",
+      "category": "experts",
+      "en": "The Titan Council",
+      "zh": "泰坦理事会",
+      "fr": "Le Conseil des Titans",
+      "ja": "タイタン評議会",
+      "createdAt": "2026-01-15 00:28:35",
+      "updatedAt": "2026-01-15 00:28:35"
+    },
+    {
+      "id": "35",
+      "key": "experts.viewall",
+      "category": "experts",
+      "en": "View All Experts",
+      "zh": "查看所有专家",
+      "fr": "Voir tous les experts",
+      "ja": "すべての専門家を見る",
+      "createdAt": "2026-01-15 00:28:35",
+      "updatedAt": "2026-01-15 00:28:35"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tkey\tcategory\ten\tzh\tfr\tja\tcreatedAt\tupdatedAt\n34\texperts.subtitle\texperts\tReal humans, real reputation. In an age of AI anonymity, we stand on the shoulders of industry giants to build a trusted E-E-A-T ecosystem.\t真人实名，真实声誉。在AI匿名时代，我们站在行业巨人的肩膀上，构建可信赖的E-E-A-T生态系统。\tDe vraies personnes, une vraie réputation. À l'ère de l'anonymat de l'IA, nous nous appuyons sur les épaules des géants de l'industrie pour construire un écosystème E-E-A-T de confiance.\t本物の人間、本物の評判。AI匿名時代において、私たちは業界の巨人の肩に立ち、信頼できるE-E-A-Tエコシステムを構築します。\t2026-01-15 00:28:35\t2026-01-15 00:28:35\n33\texperts.title\texperts\tThe Titan Council\t泰坦理事会\tLe Conseil des Titans\tタイタン評議会\t2026-01-15 00:28:35\t2026-01-15 00:28:35\n35\texperts.viewall\texperts\tView All Experts\t查看所有专家\tVoir tous les experts\tすべての専門家を見る\t2026-01-15 00:28:35\t2026-01-15 00:28:35\n",
+  "stderr": "",
+  "execution_time_ms": 61
+}

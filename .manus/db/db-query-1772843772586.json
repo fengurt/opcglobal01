@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE translations SET en = 'Co-Creation Coaches', zh = '共创教练团', fr = 'Coachs de Co-Création', ja = '共創コーチ団' WHERE `key` = 'experts.title';\nUPDATE translations SET en = 'Industry-leading practitioners who co-create with you to build your OPC journey', zh = '各行业第一梯队实战派，与你共创OPC之路', fr = 'Praticiens de premier plan qui co-créent avec vous votre parcours OPC', ja = '各業界トップの実践者があなたのOPCの旅を共創します' WHERE `key` = 'experts.subtitle';\nUPDATE translations SET en = 'View All Coaches', zh = '查看所有教练', fr = 'Voir tous les coachs', ja = 'すべてのコーチを見る' WHERE `key` = 'experts.viewall';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute UPDATE translations SET en = 'Co-Creation Coaches', zh = '共创教练团', fr = 'Coachs de Co-Création', ja = '共創コーチ団' WHERE `key` = 'experts.title';\nUPDATE translations SET en = 'Industry-leading practitioners who co-create with you to build your OPC journey', zh = '各行业第一梯队实战派，与你共创OPC之路', fr = 'Praticiens de premier plan qui co-créent avec vous votre parcours OPC', ja = '各業界トップの実践者があなたのOPCの旅を共創します' WHERE `key` = 'experts.subtitle';\nUPDATE translations SET en = 'View All Coaches', zh = '查看所有教练', fr = 'Voir tous les coachs', ja = 'すべてのコーチを見る' WHERE `key` = 'experts.viewall';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 131
+}

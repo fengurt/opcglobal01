@@ -1,0 +1,9 @@
+{
+  "query": "DELETE FROM experts WHERE nameZh NOT IN ('俞楠', '张青之', '李新', '周惠林', '王雅赟');",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute DELETE FROM experts WHERE nameZh NOT IN ('俞楠', '张青之', '李新', '周惠林', '王雅赟');",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 58
+}

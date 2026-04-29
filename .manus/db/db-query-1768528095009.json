@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE translations SET \n  en = 'Professional coaches and advisors dedicated to empowering OPC entrepreneurs with expertise in organizational development, AI integration, and business transformation.',\n  zh = '专业教练与顾问团队，致力于为OPC创业者提供组织发展、AI整合和商业转型方面的专业指导。',\n  fr = 'Coachs et conseillers professionnels dédiés à accompagner les entrepreneurs OPC avec une expertise en développement organisationnel, intégration de l''IA et transformation commerciale.',\n  ja = '組織開発、AI統合、ビジネス変革の専門知識を持ち、OPC起業家を支援する専門コーチとアドバイザー。'\nWHERE `key` = 'experts.subtitle';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute UPDATE translations SET \n  en = 'Professional coaches and advisors dedicated to empowering OPC entrepreneurs with expertise in organizational development, AI integration, and business transformation.',\n  zh = '专业教练与顾问团队，致力于为OPC创业者提供组织发展、AI整合和商业转型方面的专业指导。',\n  fr = 'Coachs et conseillers professionnels dédiés à accompagner les entrepreneurs OPC avec une expertise en développement organisationnel, intégration de l''IA et transformation commerciale.',\n  ja = '組織開発、AI統合、ビジネス変革の専門知識を持ち、OPC起業家を支援する専門コーチとアドバイザー。'\nWHERE `key` = 'experts.subtitle';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 59
+}

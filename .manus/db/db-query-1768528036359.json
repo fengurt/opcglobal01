@@ -1,0 +1,80 @@
+{
+  "query": "SELECT id, nameEn, nameZh, titleEn, isVisible FROM experts ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute SELECT id, nameEn, nameZh, titleEn, isVisible FROM experts ORDER BY id;",
+  "rows": [
+    {
+      "id": "30001",
+      "nameEn": "Yu Nan",
+      "nameZh": "俞楠",
+      "titleEn": "Researcher, Fudan University School of Intelligent Medicine",
+      "isVisible": "visible"
+    },
+    {
+      "id": "30002",
+      "nameEn": "Zhang Qingzhi",
+      "nameZh": "张青之",
+      "titleEn": "Senior Psychology Expert / Former Leader of Wenchuan Earthquake Psychological Relief Expert Group",
+      "isVisible": "visible"
+    },
+    {
+      "id": "30003",
+      "nameEn": "Li Xin",
+      "nameZh": "李新",
+      "titleEn": "Founder of \"Fresh Squeeze Comedy\"",
+      "isVisible": "visible"
+    },
+    {
+      "id": "30004",
+      "nameEn": "Zhou Huilin",
+      "nameZh": "周惠林",
+      "titleEn": "National First-Class Actor",
+      "isVisible": "visible"
+    },
+    {
+      "id": "30005",
+      "nameEn": "Wang Yayun",
+      "nameZh": "王雅赟",
+      "titleEn": "Senior Academic Planning Expert",
+      "isVisible": "visible"
+    },
+    {
+      "id": "30006",
+      "nameEn": "Yu Nan",
+      "nameZh": "俞楠",
+      "titleEn": "Researcher, Fudan University School of Intelligent Medicine",
+      "isVisible": "visible"
+    },
+    {
+      "id": "30007",
+      "nameEn": "Zhang Qingzhi",
+      "nameZh": "张青之",
+      "titleEn": "Senior Psychology Expert / Former Leader of Wenchuan Earthquake Psychological Relief Expert Group",
+      "isVisible": "visible"
+    },
+    {
+      "id": "30008",
+      "nameEn": "Li Xin",
+      "nameZh": "李新",
+      "titleEn": "Founder of \"Fresh Squeeze Comedy\"",
+      "isVisible": "visible"
+    },
+    {
+      "id": "30009",
+      "nameEn": "Zhou Huilin",
+      "nameZh": "周惠林",
+      "titleEn": "National First-Class Actor",
+      "isVisible": "visible"
+    },
+    {
+      "id": "30010",
+      "nameEn": "Wang Yayun",
+      "nameZh": "王雅赟",
+      "titleEn": "Senior Academic Planning Expert",
+      "isVisible": "visible"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tnameEn\tnameZh\ttitleEn\tisVisible\n30001\tYu Nan\t俞楠\tResearcher, Fudan University School of Intelligent Medicine\tvisible\n30002\tZhang Qingzhi\t张青之\tSenior Psychology Expert / Former Leader of Wenchuan Earthquake Psychological Relief Expert Group\tvisible\n30003\tLi Xin\t李新\tFounder of \"Fresh Squeeze Comedy\"\tvisible\n30004\tZhou Huilin\t周惠林\tNational First-Class Actor\tvisible\n30005\tWang Yayun\t王雅赟\tSenior Academic Planning Expert\tvisible\n30006\tYu Nan\t俞楠\tResearcher, Fudan University School of Intelligent Medicine\tvisible\n30007\tZhang Qingzhi\t张青之\tSenior Psychology Expert / Former Leader of Wenchuan Earthquake Psychological Relief Expert Group\tvisible\n30008\tLi Xin\t李新\tFounder of \"Fresh Squeeze Comedy\"\tvisible\n30009\tZhou Huilin\t周惠林\tNational First-Class Actor\tvisible\n30010\tWang Yayun\t王雅赟\tSenior Academic Planning Expert\tvisible\n",
+  "stderr": "",
+  "execution_time_ms": 48
+}

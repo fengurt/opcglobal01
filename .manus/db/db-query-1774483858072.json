@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE partners SET websiteUrl = '/apha', nameZh = '亚洲艺术疗愈研究院（APHA）', nameEn = 'Asia Art Healing Research Institute (APHA)', descriptionEn = 'A leading Asia-Pacific nonprofit dedicated to advancing art therapy research, professional certification, and community healing programs. APHA brings together top experts, research institutions, and practitioners across 15+ countries to promote holistic well-being through music, painting, dance, calligraphy, and drama therapy.', descriptionZh = '亚太地区领先的艺术疗愈非营利组织，致力于推进艺术疗愈研究、专业认证与社区疗愈项目。APHA 汇聚 15+ 国家的顶尖专家、研究机构与实践者，通过音乐、绘画、舞蹈、书法、戏剧等多元艺术形式促进身心健康与社会福祉。', displayOrder = 1 WHERE id = 30010;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user oHUr3BHUoKwB4Kn.3b4be3802539 --database TLS2wRZtDwCNNv8psiMfTi --execute UPDATE partners SET websiteUrl = '/apha', nameZh = '亚洲艺术疗愈研究院（APHA）', nameEn = 'Asia Art Healing Research Institute (APHA)', descriptionEn = 'A leading Asia-Pacific nonprofit dedicated to advancing art therapy research, professional certification, and community healing programs. APHA brings together top experts, research institutions, and practitioners across 15+ countries to promote holistic well-being through music, painting, dance, calligraphy, and drama therapy.', descriptionZh = '亚太地区领先的艺术疗愈非营利组织，致力于推进艺术疗愈研究、专业认证与社区疗愈项目。APHA 汇聚 15+ 国家的顶尖专家、研究机构与实践者，通过音乐、绘画、舞蹈、书法、戏剧等多元艺术形式促进身心健康与社会福祉。', displayOrder = 1 WHERE id = 30010;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 78
+}
