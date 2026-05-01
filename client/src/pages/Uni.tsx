@@ -232,6 +232,84 @@ export default function Uni() {
         </div>
       </section>
 
+      {/* ═══ UNIVERSITY PARTNERSHIP ═══ */}
+      <section className="section-padding section-deep-blue relative overflow-hidden">
+        <div className="absolute inset-0 pattern-overlay pointer-events-none opacity-30" />
+        <div className="container relative z-10">
+          <SectionHeading
+            label={tx({ zh: "高校合作", en: "University Partnership" }, language)}
+            title={tx({ zh: "面向高校的专业支持", en: "Professional Support for Universities" }, language)}
+            dark
+          />
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              {
+                title: { zh: "课程共建", en: "Curriculum Co-Development" },
+                desc: { zh: "联合高校开发AI时代新专业，将OPC方法论融入课程体系", en: "Co-develop AI-era curricula with universities, integrating OPC methodology" },
+              },
+              {
+                title: { zh: "师资培训", en: "Faculty Training" },
+                desc: { zh: "为高校教师提供AI工具应用和实战项目指导培训", en: "Train faculty in AI tools and hands-on project guidance" },
+              },
+              {
+                title: { zh: "创业孵化", en: "Startup Incubation" },
+                desc: { zh: "对接高校科研成果与OPC生态，加速技术商业化", en: "Connect university research with OPC ecosystem to accelerate commercialization" },
+              },
+            ].map((item, i) => (
+              <Reveal key={i} delay={i * 0.1}>
+                <div className="glass-card-dark p-6">
+                  <h3 className="text-base font-medium text-white mb-3">{tx(item.title, language)}</h3>
+                  <p className="text-sm text-white/60 leading-relaxed">{tx(item.desc, language)}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ UNICORN INCUBATION ═══ */}
+      <section className="section-padding bg-background">
+        <div className="container max-w-4xl">
+          <SectionHeading
+            label={tx({ zh: "独角兽孵化", en: "Unicorn Incubation" }, language)}
+            title={tx({ zh: "从0到1的加速服务", en: "From 0 to 1 Acceleration" }, language)}
+            subtitle={tx({
+              zh: "为有潜力的创业项目提供全链路支持，快速成长为行业独角兽",
+              en: "Full-chain support for promising startups to grow into industry unicorns",
+            }, language)}
+          />
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                title: { zh: "战略定位", en: "Strategic Positioning" },
+                desc: { zh: "帮助创始人厘清商业模式，定位差异化竞争赛道", en: "Help founders clarify business models and position differentiated competitive tracks" },
+              },
+              {
+                title: { zh: "资源对接", en: "Resource Matching" },
+                desc: { zh: "对接全球订单网络、投资机构、产业专家资源", en: "Connect with global order networks, investors, and industry expert resources" },
+              },
+              {
+                title: { zh: "团队组建", en: "Team Building" },
+                desc: { zh: "协助组建OPC液态团队，搭建全球化协作架构", en: "Assist in building OPC liquid teams and establishing global collaboration frameworks" },
+              },
+              {
+                title: { zh: "资本加速", en: "Capital Acceleration" },
+                desc: { zh: "对接早期投资、RWA资产融资、战略投资人", en: "Connect with seed investment, RWA financing, and strategic investors" },
+              },
+            ].map((item, i) => (
+              <Reveal key={i} delay={i * 0.1}>
+                <div className="card-premium h-full">
+                  <h3 className="text-base font-medium text-foreground mb-3">{tx(item.title, language)}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{tx(item.desc, language)}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══ 2025-2026 FRONTIER ═══ */}
       <section className="section-padding-sm bg-[oklch(0.98_0.003_250)]">
         <div className="container max-w-4xl">

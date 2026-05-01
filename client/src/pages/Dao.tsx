@@ -142,26 +142,33 @@ export default function Dao() {
       <section className="section-padding bg-background">
         <div className="container max-w-5xl">
           <SectionHeading
-            label={tx({ zh: "治理架构", en: "Governance Architecture" }, language)}
-            title={tx({ zh: "双院制 + 泰坦理事会", en: "Dual-Chamber + Titan Council" }, language)}
+            label={tx({ zh: "治理机制", en: "Governance" }, language)}
+            title={tx({ zh: "三元协作治理", en: "Tripartite Collaboration Governance" }, language)}
+            subtitle={tx({
+              zh: "共创教练、教练合伙人、OPC单元三层协同，确保生态高效运转",
+              en: "Co-Creation Coaches, Coach Partners, and OPC Units work together to ensure ecosystem efficiency",
+            }, language)}
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
               {
-                icon: Coins,
-                title: { zh: "代币之家", en: "Token House" },
-                desc: { zh: "代币加权投票\u2014\u2014管理国库和协议升级。确保经济利益方的话语权。", en: "Token-weighted voting \u2014 treasury management and protocol upgrades." },
+                icon: Users,
+                title: { zh: "共创教练", en: "Co-Creation Coaches" },
+                role: { zh: "领域专家与导师", en: "Domain Experts & Mentors" },
+                desc: { zh: "提供专业指导、经验传承、知识贡献", en: "Provide professional guidance, experience transfer, knowledge contribution" },
               },
               {
-                icon: Users,
-                title: { zh: "公民之家", en: "Citizen House" },
-                desc: { zh: "声誉治理，一人一票\u2014\u2014知识策展和真理验证。确保贡献者的话语权。", en: "Reputation-based, one-person-one-vote \u2014 knowledge curation and truth verification." },
+                icon: Coins,
+                title: { zh: "教练合伙人", en: "Coach Partners" },
+                role: { zh: "项目最终责任人", en: "Project Final Decision Maker" },
+                desc: { zh: "获取订单、管理关键关系、发展OPC生态、挖掘AI时代新岗位", en: "Secure orders, manage key relationships, develop OPC ecosystem, identify AI-era opportunities" },
               },
               {
                 icon: Gavel,
-                title: { zh: "泰坦理事会", en: "Titan Council" },
-                desc: { zh: "由 L3 泰坦级教练组成。轮值主席制，每届 6 个月，确保权力不固化。", en: "L3 Titan-level coaches. Rotating presidency every 6 months to prevent power consolidation." },
+                title: { zh: "OPC 单元", en: "OPC Units" },
+                role: { zh: "超级个体合作单元", en: "Super-Individual Units" },
+                desc: { zh: "由超级个体组成的合作单元，负责项目交付和服务", en: "Collaborative units of super-individuals responsible for delivery and service" },
               },
             ].map((item, i) => (
               <Reveal key={i} delay={i * 0.1}>
@@ -169,8 +176,9 @@ export default function Dao() {
                   <div className="w-12 h-12 rounded-full border border-gold/20 flex items-center justify-center mx-auto mb-5">
                     <item.icon className="w-5 h-5 text-gold/60" />
                   </div>
-                  <h3 className="text-base font-medium text-foreground mb-3">{tx(item.title, language)}</h3>
-                  <p className="text-base text-muted-foreground leading-relaxed">{tx(item.desc, language)}</p>
+                  <h3 className="text-base font-medium text-foreground mb-2">{tx(item.title, language)}</h3>
+                  <p className="text-xs text-gold/60 mb-3">{tx(item.role, language)}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{tx(item.desc, language)}</p>
                 </div>
               </Reveal>
             ))}

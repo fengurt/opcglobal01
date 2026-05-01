@@ -145,38 +145,52 @@ export default function Hom() {
         </div>
       </section>
 
-      {/* ═══ GLOBAL PRESENCE ═══ */}
+      {/* ═══ OFFLINE LOCATIONS ═══ */}
       <section className="section-padding section-deep-blue relative overflow-hidden">
         <div className="absolute inset-0 pattern-overlay pointer-events-none opacity-30" />
         <div className="container relative z-10">
           <SectionHeading
-            label={tx({ zh: "全球布局", en: "Global Presence" }, language)}
-            title={tx({ zh: "OPC 区域服务中心网络", en: "OPC Regional Service Center Network" }, language)}
+            label={tx({ zh: "线下体验", en: "Offline Experience" }, language)}
+            title={tx({ zh: "OPC HOM 第一期线下体验点", en: "OPC HOM Phase 1 Locations" }, language)}
             dark
           />
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
-              { city: { zh: "新加坡", en: "Singapore" }, role: { zh: "全球总部 HQ", en: "Global HQ" }, highlight: true },
-              { city: { zh: "吉隆坡", en: "Kuala Lumpur" }, role: { zh: "东南亚 ROC", en: "SEA ROC" }, highlight: false },
-              { city: { zh: "东京", en: "Tokyo" }, role: { zh: "东亚 ROC", en: "East Asia ROC" }, highlight: false },
-              { city: { zh: "北京", en: "Beijing" }, role: { zh: "中国区 ROC", en: "China ROC" }, highlight: false },
-              { city: { zh: "深圳", en: "Shenzhen" }, role: "OPC Home", highlight: false },
-              { city: { zh: "曼谷", en: "Bangkok" }, role: "OPC Home", highlight: false },
+              {
+                city: { zh: "上海长宁区", en: "Shanghai Changning" },
+                name: { zh: "IGS", en: "IGS" },
+                address: { zh: "上海长宁区", en: "Changning District, Shanghai" },
+                desc: { zh: "智能科技与创新创业体验中心", en: "Smart Tech & Innovation Hub" },
+              },
+              {
+                city: { zh: "北京", en: "Beijing" },
+                name: { zh: "北大博雅国际酒店", en: "PKU Boya International Hotel" },
+                address: { zh: "北京中关村", en: "Zhongguancun, Beijing" },
+                desc: { zh: "高端商务与科创交流空间", en: "Premium Business & Tech Space" },
+              },
+              {
+                city: { zh: "澳门", en: "Macau" },
+                name: { zh: "文化创新中心", en: "Cultural Innovation Center" },
+                address: { zh: "澳门", en: "Macau" },
+                desc: { zh: "文化创意与跨境合作平台", en: "Cultural Creative & Cross-border Hub" },
+              },
             ].map((loc, i) => (
-              <Reveal key={i} delay={i * 0.08}>
-                <div className={`glass-card-dark p-5 ${loc.highlight ? "!border-[oklch(0.62_0.1_75/0.3)]" : ""}`}>
-                  <div className="flex items-center gap-2.5">
-                    <MapPin className="w-3.5 h-3.5 text-gold/60 shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-white">
-                        {tx(typeof loc.city === "string" ? { en: loc.city } : loc.city, language)}
-                      </p>
-                      <p className="text-sm text-white/65">
-                        {typeof loc.role === "string" ? loc.role : tx(loc.role, language)}
-                      </p>
-                    </div>
+              <Reveal key={i} delay={i * 0.1}>
+                <div className="glass-card-dark p-6 md:p-8 h-full">
+                  <div className="flex items-center gap-2 mb-4">
+                    <MapPin className="w-4 h-4 text-gold/60 shrink-0" />
+                    <span className="text-xs text-gold/60 tracking-wider uppercase">{tx(loc.city, language)}</span>
                   </div>
+                  <h3 className="text-lg font-medium text-white mb-2">
+                    {tx(loc.name, language)}
+                  </h3>
+                  <p className="text-sm text-white/60 mb-3">
+                    {tx(loc.address, language)}
+                  </p>
+                  <p className="text-sm text-white/50">
+                    {tx(loc.desc, language)}
+                  </p>
                 </div>
               </Reveal>
             ))}
