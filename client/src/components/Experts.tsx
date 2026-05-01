@@ -3,11 +3,57 @@ import { trpc } from "@/lib/trpc";
 import { useState, useMemo, useCallback } from "react";
 import { ChevronDown, ChevronUp, ArrowDownAZ } from "lucide-react";
 
+// Static fallback data for when API is unavailable (Cloudflare static deployment)
+const STATIC_EXPERTS = [
+  {
+    id: 1,
+    nameEn: "Dr. Sarah Chen",
+    nameZh: "陈莎博士",
+    titleEn: "AI Strategy Advisor",
+    titleZh: "AI战略顾问",
+    roleEn: "OPC Titan Coach",
+    roleZh: "OPC泰坦教练",
+    bioEn: "Former McKinsey partner, 15+ years in AI transformation. Helped 50+ enterprises achieve 3x productivity gains.",
+    bioZh: "前麦肯锡合伙人，15年AI转型经验。帮助50多家企业实现3倍生产力提升。",
+    avatarUrl: null,
+    displayOrder: 1,
+  },
+  {
+    id: 2,
+    nameEn: "Michael Zhang",
+    nameZh: "张明远",
+    titleEn: "Blockchain Architect",
+    titleZh: "区块链架构师",
+    roleEn: "OPC L2 Pro Coach",
+    roleZh: "OPC L2 Pro教练",
+    bioEn: "Web3 pioneer, led development of 3 major DeFi protocols. Specializes in decentralized governance.",
+    bioZh: "Web3先驱，主导开发3个主要DeFi协议。专注去中心化治理。",
+    avatarUrl: null,
+    displayOrder: 2,
+  },
+  {
+    id: 3,
+    nameEn: "Lisa Wang",
+    nameZh: "王丽萨",
+    titleEn: "Growth Marketing Expert",
+    titleZh: "增长营销专家",
+    roleEn: "OPC Principal Coach",
+    roleZh: "OPC首席教练",
+    bioEn: "Scaled 3 startups from 0 to $10M ARR. Expert in cross-border e-commerce and brand building.",
+    bioZh: "从零到千万ARR成功打造3家创业公司。跨境电商与品牌建设专家。",
+    avatarUrl: null,
+    displayOrder: 3,
+  },
+];
+
 export default function Experts() {
   const { t, language } = useLanguage();
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const [sortAlpha, setSortAlpha] = useState(false);
   const { data: experts = [], isLoading } = trpc.experts.visible.useQuery();
+
+  // Use static fallback when no API data available (static deployment)
+  const displayExperts = experts.length > 0 ? experts : STATIC_EXPERTS;
   
   const getLocalizedField = useCallback((expert: typeof experts[0], field: 'name' | 'role' | 'title' | 'bio') => {
     const langMap: Record<string, 'En' | 'Zh' | 'Fr' | 'Ja'> = {
@@ -22,8 +68,8 @@ export default function Experts() {
   // Sort experts: by displayOrder (default) or alphabetically
   // This hook MUST be before any conditional returns
   const sortedExperts = useMemo(() => {
-    if (!sortAlpha) return [...experts].sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
-    return [...experts].sort((a, b) => {
+    if (!sortAlpha) return [...displayExperts].sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
+    return [...displayExperts].sort((a, b) => {
       const langMap: Record<string, 'En' | 'Zh' | 'Fr' | 'Ja'> = {
         en: 'En', zh: 'Zh', fr: 'Fr', ja: 'Ja',
       };
@@ -32,7 +78,7 @@ export default function Experts() {
       const nameB = ((b as any)[`name${suffix}`] || b.nameEn || '').toLowerCase();
       return nameA.localeCompare(nameB, language === 'zh' ? 'zh-CN' : language === 'ja' ? 'ja' : 'en');
     });
-  }, [experts, sortAlpha, language]);
+  }, [displayExperts, sortAlpha, language]);
   
   if (isLoading) {
     return (
@@ -48,8 +94,8 @@ export default function Experts() {
       </section>
     );
   }
-  
-  if (experts.length === 0) return null;
+
+  if (displayExperts.length === 0) return null;
   
   return (
     <section id="experts" className="section-padding">

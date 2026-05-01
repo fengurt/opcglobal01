@@ -236,7 +236,7 @@ export default function Hero() {
           <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {[
               {
-                role: { zh: "\u4ea7\u4e1a\u4e13\u5bb6", en: "Industry Experts" },
+                role: { zh: "\u5171\u521b\u6559\u7ec3", en: "Co-Creation Coaches" },
                 metaphor: { zh: "\u201c\u5927\u8111\u201d", en: "The Brain" },
                 desc: { zh: "\u5c06\u9690\u6027\u77e5\u8bc6\u5c01\u88c5\u4e3a AI \u7cfb\u7edf\uff0c\u5b9a\u4e49\u610f\u4e49\u4e0e\u6807\u51c6", en: "Package tacit knowledge into AI systems" },
                 num: "01",
@@ -281,9 +281,9 @@ export default function Hero() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
             {[
               {
-                audience: { zh: "\u884c\u4e1a\u4e13\u5bb6", en: "Industry Experts" },
+                audience: { zh: "\u5171\u521b\u6559\u7ec3", en: "Co-Creation Coaches" },
                 value: { zh: "\u5c06\u77e5\u8bc6\u5c01\u88c5\u4e3a AI \u7cfb\u7edf\uff0c\u8d5a\u53d6\u88ab\u52a8\u6536\u76ca", en: "Package knowledge into AI systems, earn passive income" },
-                cta: { zh: "\u6210\u4e3a\u4e13\u5bb6", en: "Become an Expert" },
+                cta: { zh: "\u6210\u4e3a\u5171\u521b\u6559\u7ec3", en: "Become a Coach" },
               },
               {
                 audience: { zh: "\u6559\u7ec3\u5408\u4f19\u4eba", en: "Coach Partners" },

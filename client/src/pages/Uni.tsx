@@ -209,8 +209,8 @@ export default function Uni() {
                 </h3>
                 <p className="text-base text-muted-foreground leading-relaxed">
                   {tx({
-                    zh: "汇聚全球顶尖产业专家，为企业、政府和投资方提供基于真实交付经验的战略咨询服务。不是纸上谈兵，而是从实战中提炼的方法论。",
-                    en: "Assembling top global industry experts to provide strategic consulting based on real delivery experience. Methodology distilled from real-world practice.",
+                    zh: "汇聚全球顶尖共创教练，为企业、政府和投资方提供基于真实交付经验的战略咨询服务。不是纸上谈兵，而是从实战中提炼的方法论。",
+                    en: "Assembling top global co-creation coaches to provide strategic consulting based on real delivery experience. Methodology distilled from real-world practice.",
                   }, language)}
                 </p>
               </div>
