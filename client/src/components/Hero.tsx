@@ -179,8 +179,8 @@ export default function Hero() {
               <p className="stat-number tracking-[0.1em]">0.5 / 3 / 2</p>
               <p className="text-muted-foreground mt-3 max-w-md mx-auto">
                 {tx({
-                  zh: "\u534a\u4e2a\u4eba\u7684\u65f6\u95f4\uff0c\u4e09\u500d\u4ea7\u51fa\uff0c\u53cc\u500d\u6536\u5165",
-                  en: "Half the time, triple the output, double the income",
+                  zh: "AI杠杆 · 效率跃升 · 收益倍增",
+                  en: "AI Leverage · Efficiency · Revenue",
                 }, language)}
               </p>
             </div>
@@ -190,21 +190,21 @@ export default function Hero() {
             {[
               {
                 num: 0.5,
-                label: { zh: "\u65f6\u95f4\u5957\u5229", en: "Time Arbitrage" },
-                stat: { zh: "\u51cf\u5c11 55% \u7f16\u7801\u65f6\u95f4", en: "55% coding time saved" },
-                src: "GitHub Copilot Research",
+                label: { zh: "时间套利", en: "Time Arbitrage" },
+                stat: { zh: "AI处理重复工作，专注高价值创造", en: "AI handles repetitive work, focus on high-value creation" },
+                src: { zh: "AI杠杆降低70%时间成本", en: "AI leverage cuts 70% time cost" },
               },
               {
                 num: 3.0,
-                label: { zh: "\u4ea7\u51fa\u4e58\u6570", en: "Output Multiplier" },
-                stat: { zh: "\u521b\u610f\u8d28\u91cf\u63d0\u5347 40%", en: "+40% creative quality" },
-                src: "Harvard / BCG",
+                label: { zh: "产出乘数", en: "Output Multiplier" },
+                stat: { zh: "AI放大创意质量，规模化内容生产", en: "AI amplifies creative quality, scales content production" },
+                src: { zh: "AI工具使产出提升3-5倍", en: "AI tools boost output 3-5x" },
               },
               {
                 num: 2.0,
-                label: { zh: "\u4ef7\u503c\u6355\u83b7", en: "Value Capture" },
-                stat: { zh: "100% \u4ef7\u503c\u5f52\u5df1", en: "100% value ownership" },
-                src: "OPC Model",
+                label: { zh: "价值捕获", en: "Value Capture" },
+                stat: { zh: "掌握完整商业闭环，AI驱动收益增长", en: "Own full business loop, AI-driven revenue growth" },
+                src: { zh: "AI杠杆实现收益指数级增长", en: "AI leverage enables exponential revenue growth" },
               },
             ].map((item, i) => (
               <Reveal key={i} delay={i * 0.15}>
@@ -216,7 +216,7 @@ export default function Hero() {
                     {tx(item.label as Record<Lang, string>, language)}
                   </h3>
                   <p className="text-gold font-medium">{tx(item.stat as Record<Lang, string>, language)}</p>
-                  <p className="text-xs text-muted-foreground/60 mt-1">{item.src}</p>
+                  <p className="text-xs text-muted-foreground/60 mt-1">{tx(item.src as Record<Lang, string>, language)}</p>
                 </div>
               </Reveal>
             ))}
