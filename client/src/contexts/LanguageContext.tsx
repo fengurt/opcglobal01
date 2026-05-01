@@ -209,7 +209,7 @@ const defaultTranslations: Record<Language, Record<string, string>> = {
     'admin.editPartnerJsonDesc': 'Edit partner information using JSON format for quick updates.',
     
     // Footer
-    'footer.description': 'The "Digital Noah\'s Ark" for the AI era. Empowering individuals to build world-class enterprises.',
+    'footer.description': 'Master AI, Achieve Freedom',
     'footer.platform': 'Platform',
     'footer.alliance': 'Alliance',
     'footer.trust': 'Trust & Security',
@@ -417,7 +417,7 @@ const defaultTranslations: Record<Language, Record<string, string>> = {
     'admin.editPartnerJsonDesc': '使用JSON格式快速编辑合作伙伴信息。',
     
     // 页脚
-    'footer.description': 'AI时代的"数字诺亚方舟"。赋能个体建立世界级企业。',
+    'footer.description': '善用AI，终获自由',
     'footer.platform': '平台',
     'footer.alliance': '联盟',
     'footer.trust': '信任与安全',
@@ -625,7 +625,7 @@ const defaultTranslations: Record<Language, Record<string, string>> = {
     'admin.editPartnerJsonDesc': 'Modifier les informations du partenaire au format JSON.',
     
     // Pied de page
-    'footer.description': 'L\'"Arche de Noé Numérique" pour l\'ère de l\'IA.',
+    'footer.description': 'Maîtriser l\'IA, Atteindre la Liberté',
     'footer.platform': 'Plateforme',
     'footer.alliance': 'Alliance',
     'footer.trust': 'Confiance et Sécurité',
@@ -833,7 +833,7 @@ const defaultTranslations: Record<Language, Record<string, string>> = {
     'admin.editPartnerJsonDesc': 'JSON形式でパートナー情報を素早く編集。',
     
     // フッター
-    'footer.description': 'AI時代のデジタルノアの方舟。',
+        'footer.description': 'AIを有効に活用し、自由总收入',
     'footer.platform': 'プラットフォーム',
     'footer.alliance': 'アライアンス',
     'footer.trust': '信頼とセキュリティ',
