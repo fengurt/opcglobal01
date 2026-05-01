@@ -89,7 +89,7 @@ export default function Hero() {
             <blockquote className="relative pl-6 border-l-2 border-gold/30">
               <p className="text-gold/85 text-xl md:text-2xl leading-[1.8] italic" style={{ fontFamily: "var(--font-heading)" }}>
                 {tx({
-                  zh: "\u201c\u4e0a\u5348\u6253\u731e\uff0c\u4e0b\u5348\u6355\u9c7c\uff0c\u508d\u665a\u4ece\u4e8b\u755c\u7267\uff0c\u665a\u996d\u540e\u4ece\u4e8b\u6279\u5224\u3002\u201d",
+                  zh: "\u201c\u4e0a\u5348\u6253\u730e\uff0c\u4e0b\u5348\u6355\u9c7c\uff0c\u508d\u665a\u4ece\u4e8b\u755c\u7267\uff0c\u665a\u996d\u540e\u4ece\u4e8b\u6279\u5224\u3002\u201d",
                   en: "\u201cHunt in the morning, fish in the afternoon, rear cattle in the evening, criticize after dinner.\u201d",
                   fr: "\u00ab Chasser le matin, p\u00eacher l\u2019apr\u00e8s-midi, \u00e9lever du b\u00e9tail le soir, critiquer apr\u00e8s le d\u00eener. \u00bb",
                   ja: "\u300c\u5348\u524d\u306f\u72e9\u308a\u3092\u3057\u3001\u5348\u5f8c\u306f\u9b5a\u3092\u91e3\u308a\u3001\u5915\u65b9\u306f\u7267\u755c\u3092\u3057\u3001\u5915\u98df\u5f8c\u306f\u6279\u5224\u3092\u3059\u308b\u3002\u300d",

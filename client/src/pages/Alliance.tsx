@@ -13,10 +13,75 @@ import { Reveal, SectionHeading } from "@/components/motion";
 type Lang = "en" | "zh" | "fr" | "ja";
 const tx = (m: Partial<Record<Lang, string>>, lang: string) => m[lang as Lang] || m.en || "";
 
+// Static fallback data for static deployment
+const STATIC_EXPERTS = [
+  {
+    id: 1,
+    nameEn: "Sarah Chen",
+    nameZh: "陈莎",
+    titleEn: "AI Strategy Coach",
+    titleZh: "AI战略教练",
+    roleEn: "L3 Titan",
+    roleZh: "L3泰坦",
+    bioEn: "Former McKinsey partner, 15+ years in AI transformation. Helped 50+ enterprises achieve productivity gains.",
+    bioZh: "前麦肯锡合伙人，15年AI转型经验。帮助50多家企业实现生产力提升。",
+  },
+  {
+    id: 2,
+    nameEn: "Michael Zhang",
+    nameZh: "张明远",
+    titleEn: "Blockchain Architect",
+    titleZh: "区块链架构师",
+    roleEn: "L2 Pro",
+    roleZh: "L2 Pro",
+    bioEn: "Web3 pioneer, led development of 3 major DeFi protocols. Specializes in decentralized governance.",
+    bioZh: "Web3先驱，主导开发3个主要DeFi协议。专注去中心化治理。",
+  },
+  {
+    id: 3,
+    nameEn: "Lisa Wang",
+    nameZh: "王丽萨",
+    titleEn: "Growth Marketing Expert",
+    titleZh: "增长营销专家",
+    roleEn: "L2 Principal",
+    roleZh: "L2首席",
+    bioEn: "Scaled 3 startups from 0 to $10M ARR. Expert in cross-border e-commerce.",
+    bioZh: "从零到千万ARR成功打造3家创业公司。跨境电商专家。",
+  },
+];
+
+const STATIC_PARTNERS = [
+  {
+    id: 1,
+    type: "coach" as const,
+    nameEn: "OPC Global Coach Network",
+    nameZh: "OPC全球教练网络",
+    descriptionEn: "Connecting aspiring OPC members with certified coaches worldwide.",
+    descriptionZh: "连接全球认证教练与有抱负的OPC成员。",
+    websiteUrl: null,
+    contactEmail: "coaches@opcglobal.ai",
+  },
+  {
+    id: 2,
+    type: "organization" as const,
+    nameEn: "Global Tech Alliance",
+    nameZh: "全球科技联盟",
+    descriptionEn: "Technology ecosystem partnership for OPC infrastructure.",
+    descriptionZh: "OPC基础设施技术生态合作。",
+    websiteUrl: "https://example.com",
+    contactEmail: null,
+  },
+];
+
 export default function Alliance() {
   const { language } = useLanguage();
-  const { data: partners, isLoading: partnersLoading } = trpc.partners.getVisible.useQuery();
-  const { data: experts, isLoading: expertsLoading } = trpc.experts.visible.useQuery();
+  const { data: apiPartners, isLoading: partnersLoading } = trpc.partners.getVisible.useQuery();
+  const { data: apiExperts, isLoading: expertsLoading } = trpc.experts.visible.useQuery();
+
+  // Use static fallback when API is unavailable (static deployment)
+  const partners = apiPartners && apiPartners.length > 0 ? apiPartners : STATIC_PARTNERS;
+  const experts = apiExperts && apiExperts.length > 0 ? apiExperts : STATIC_EXPERTS;
+  const isLoading = partnersLoading && expertsLoading;
 
   const loc = (en?: string | null, zh?: string | null, fr?: string | null, ja?: string | null) => {
     const texts: Record<Lang, string | null | undefined> = { en, zh, fr, ja };
@@ -41,13 +106,17 @@ export default function Alliance() {
     return tx(labels[type] || { en: type }, language);
   };
 
-  if (partnersLoading || expertsLoading) {
+  if (isLoading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" />
       </div>
     );
   }
+
+  // Use static data when API data is empty (static deployment)
+  const displayPartners = partners && partners.length > 0 ? partners : STATIC_PARTNERS;
+  const displayExperts = experts && experts.length > 0 ? experts : STATIC_EXPERTS;
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -199,16 +268,16 @@ export default function Alliance() {
       </section>
 
       {/* ═══ FACILITATORS — DB-driven ═══ */}
-      {experts && experts.length > 0 && (
+      {displayExperts && displayExperts.length > 0 && (
         <section className="section-padding bg-background">
           <div className="container max-w-5xl">
             <SectionHeading
-              label={tx({ zh: "教练顾问团", en: "OPC Facilitators" }, language)}
+              label={tx({ zh: "共创教练团", en: "Co-Creation Coach Team" }, language)}
               title={tx({ zh: "你的成长伙伴", en: "Your Growth Partners" }, language)}
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {experts.map((expert, i) => (
+              {displayExperts.map((expert, i) => (
                 <Reveal key={expert.id} delay={i * 0.08}>
                   <div className="card-premium h-full">
                     <div className="flex items-start gap-4 mb-4">
@@ -242,7 +311,7 @@ export default function Alliance() {
       )}
 
       {/* ═══ PARTNERS — DB-driven ═══ */}
-      {partners && partners.length > 0 && (
+      {displayPartners && displayPartners.length > 0 && (
         <section className="section-padding bg-[oklch(0.98_0.003_250)]">
           <div className="container max-w-5xl">
             <SectionHeading
@@ -251,7 +320,7 @@ export default function Alliance() {
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {partners.map((partner, i) => (
+              {displayPartners.map((partner, i) => (
                 <Reveal key={partner.id} delay={i * 0.08}>
                   <div className="card-premium h-full">
                     <div className="flex items-start gap-4 mb-4">
