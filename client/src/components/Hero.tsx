@@ -179,8 +179,8 @@ export default function Hero() {
               <p className="stat-number tracking-[0.1em]">0.5 / 3 / 2</p>
               <p className="text-muted-foreground mt-3 max-w-md mx-auto">
                 {tx({
-                  zh: "AI杠杆 · 效率跃升 · 收益倍增",
-                  en: "AI Leverage · Efficiency · Revenue",
+                  zh: "AI杠杆 · 超级个体的效率公式",
+                  en: "AI Leverage · The Super-Individual Formula",
                 }, language)}
               </p>
             </div>
@@ -191,20 +191,20 @@ export default function Hero() {
               {
                 num: 0.5,
                 label: { zh: "时间套利", en: "Time Arbitrage" },
-                stat: { zh: "AI处理重复工作，专注高价值创造", en: "AI handles repetitive work, focus on high-value creation" },
-                src: { zh: "AI杠杆降低70%时间成本", en: "AI leverage cuts 70% time cost" },
+                stat: { zh: "AI承担执行，一个人干两人的活", en: "AI executes, one person does the work of two" },
+                src: { zh: "从雇佣到杠杆", en: "From employment to leverage" },
               },
               {
                 num: 3.0,
                 label: { zh: "产出乘数", en: "Output Multiplier" },
-                stat: { zh: "AI放大创意质量，规模化内容生产", en: "AI amplifies creative quality, scales content production" },
-                src: { zh: "AI工具使产出提升3-5倍", en: "AI tools boost output 3-5x" },
+                stat: { zh: "AI放大能力，效率提升3-10倍", en: "AI amplifies capability, 3-10x efficiency gain" },
+                src: { zh: "从工具到放大器", en: "From tools to amplification" },
               },
               {
                 num: 2.0,
                 label: { zh: "价值捕获", en: "Value Capture" },
-                stat: { zh: "掌握完整商业闭环，AI驱动收益增长", en: "Own full business loop, AI-driven revenue growth" },
-                src: { zh: "AI杠杆实现收益指数级增长", en: "AI leverage enables exponential revenue growth" },
+                stat: { zh: "AI驱动自动化，价值100%归己", en: "AI-driven automation, 100% value ownership" },
+                src: { zh: "从分成到独享", en: "From sharing to owning" },
               },
             ].map((item, i) => (
               <Reveal key={i} delay={i * 0.15}>
