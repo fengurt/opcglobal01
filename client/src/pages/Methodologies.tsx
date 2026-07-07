@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trpc } from "@/lib/trpc";
 import { Loader2, ArrowRight, BookOpen, Lightbulb, Target, Scale, BarChart3 } from "lucide-react";
-import { useState } from "react";
-import { Streamdown } from "streamdown";
+import { useState, lazy, Suspense } from "react";
+const Streamdown = lazy(() => import("streamdown").then(m => ({ default: m.Streamdown })));
 
 const iconMap: Record<string, React.ReactNode> = {
   "052-paradigm": <Target className="w-5 h-5" />,
@@ -106,7 +106,9 @@ export default function Methodologies() {
                       <div className="px-6 md:px-7 pb-7 pt-0">
                         <div className="border-t border-border pt-6">
                           <div className="prose prose-sm max-w-none prose-headings:font-heading prose-headings:text-foreground prose-p:text-muted-foreground prose-p:text-xs prose-p:leading-relaxed prose-strong:text-foreground prose-li:text-xs prose-li:text-muted-foreground">
-                            <Streamdown>{description}</Streamdown>
+                            <Suspense fallback={<p className="text-xs text-muted-foreground">{description}</p>}>
+                              <Streamdown>{description}</Streamdown>
+                            </Suspense>
                           </div>
                         </div>
                       </div>
