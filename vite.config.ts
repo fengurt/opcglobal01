@@ -56,6 +56,8 @@ export default defineConfig({
         assetFileNames: "assets/[name]-[hash][extname]",
       },
     },
+    // Copy Cloudflare Pages config files
+    copyPublicDir: true,
   },
   ssr: {
     noExternal: [
